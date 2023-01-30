@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('entitas', function (Blueprint $table) {
             $table->id();
             $table->string("title");
-            $table->longtext("content");
+            $table->longtext("content")->nullable()->default('a');
             $table->string("cover_img")->nullable();
             $table->boolean("public")->default(true);
             $table->string("status")->default("draft");
